@@ -8,7 +8,8 @@ a high probability of being found in the set of images generated from the encode
 block is a neural network trained for a specific image transformation on a set of images.
 
 The general idea to generate a random program sequence and try to infer the random program sequence using any
-form of encoder-decoder neural network architecture.
+form of encoder-decoder neural network architecture. Training can be done with both cpus and gpus but generally
+gpus might guarantee better results
 
 To display image transformations, run texture_transformations.py for grayscale and texture_transformationsRGB.py
 ----------------------------------------------------------------------------------------------------------------
@@ -18,3 +19,4 @@ To generate textures, run gen_sequence.py
 -----------------------------------------
 To train models, run train.py.
 -----------------------------------------
+To predict programs that create a texture, run predict_prog.py
