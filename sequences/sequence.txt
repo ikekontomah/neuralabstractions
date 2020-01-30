@@ -1,0 +1,35 @@
+#n=1
+
+[['blur'], ['blur'], ['affine'], ['affine'], ['blur'], ['translate']]
+
+#n=2 
+
+[['translate'], ['perspective'], ['rotate'], ['rotate', 'translate'], ['blur'], ['blur', 'translate'], ['perspective', 'translate'], ['translate', 'translate'], ['translate'], ['translate', 'perspective'], ['affine'], ['translate', 'perspective']]
+
+#n=3
+
+[['rotate', 'rotate'], ['translate', 'rotate'], ['rotate', 'blur', 'translate'], ['translate'], ['rotate'], ['rotate'], ['perspective', 'translate'], ['blur', 'rotate', 'translate'], ['perspective', 'translate', 'translate'], ['perspective'], ['rotate', 'translate'], ['rotate', 'translate', 'blur']]
+
+#n=4
+
+[['translate'], ['translate'], ['affine'], ['perspective', 'perspective'], ['blur'], ['perspective', 'blur', 'perspective', 'rotate'], ['blur', 'translate', 'affine'], ['translate', 'rotate', 'perspective'], ['rotate', 'rotate', 'blur'], ['blur', 'affine'], ['affine', 'perspective', 'rotate', 'rotate'], ['rotate', 'translate', 'translate']]
+
+#n=5
+
+[['blur', 'perspective'], ['blur'], ['rotate'], ['translate'], ['translate', 'translate', 'rotate', 'blur'], ['perspective', 'affine', 'affine', 'rotate', 'blur'], ['perspective', 'translate', 'blur', 'rotate', 'translate'], ['rotate', 'rotate', 'blur'], ['rotate', 'blur'], ['rotate', 'rotate', 'rotate', 'perspective'], ['perspective', 'rotate', 'translate'], ['translate', 'affine', 'perspective']]
+
+#n=6
+[['perspective', 'blur', 'blur', 'affine', 'translate', 'affine'], ['blur', 'blur', 'affine', 'affine', 'affine', 'rotate'], ['affine', 'blur', 'translate', 'affine', 'affine'], ['blur', 'blur', 'rotate', 'blur', 'blur'], ['affine', 'blur', 'perspective'], ['translate'], ['translate', 'rotate', 'perspective', 'blur', 'affine', 'blur'], ['rotate'], ['perspective', 'translate', 'rotate', 'translate', 'rotate', 'perspective'], ['affine'], ['affine', 'perspective', 'blur', 'blur', 'translate'], ['affine', 'rotate']]
+
+#n=7
+[['blur', 'affine', 'blur', 'affine', 'rotate', 'blur', 'blur'], ['translate', 'affine', 'translate', 'perspective', 'rotate', 'translate', 'rotate'], ['perspective', 'blur', 'rotate', 'affine', 'rotate'], ['affine', 'blur'], ['perspective', 'translate', 'translate', 'blur', 'perspective'], ['translate', 'blur', 'translate', 'perspective', 'translate'], ['rotate', 'blur', 'translate', 'blur', 'translate'], ['translate', 'blur', 'affine', 'translate', 'translate', 'blur'], ['translate', 'affine', 'affine', 'perspective', 'perspective', 'perspective'], ['blur', 'perspective', 'translate', 'perspective', 'rotate'], ['rotate'], ['blur', 'blur', 'perspective', 'blur', 'blur', 'perspective', 'rotate']]
+
+#n=8
+[['rotate', 'rotate'], ['translate', 'perspective'], ['blur', 'affine', 'rotate'], ['blur', 'perspective', 'rotate', 'affine', 'rotate', 'perspective', 'translate', 'affine'], ['blur'], ['perspective'], ['perspective', 'affine'], ['affine', 'affine', 'perspective', 'translate', 'perspective', 'affine', 'translate', 'perspective'], ['rotate'], ['perspective', 'affine', 'perspective'], ['affine'], ['perspective', 'perspective', 'affine', 'affine', 'translate']]
+
+#n=9
+[['translate', 'blur', 'translate', 'rotate', 'translate', 'blur', 'rotate', 'perspective', 'blur'], ['perspective', 'affine', 'translate', 'translate'], ['translate', 'rotate', 'affine', 'rotate'], ['blur', 'rotate', 'blur', 'blur'], ['blur', 'affine', 'affine', 'rotate', 'perspective'], ['blur', 'blur', 'blur', 'blur'], ['perspective', 'translate', 'translate', 'affine', 'rotate'], ['translate', 'blur', 'affine', 'blur', 'affine', 'affine', 'perspective', 'translate'], ['rotate', 'perspective', 'translate'], ['blur', 'affine', 'perspective', 'perspective', 'translate', 'blur'], ['affine', 'affine', 'blur', 'perspective'], ['affine', 'blur', 'translate', 'affine', 'affine', 'perspective', 'rotate', 'translate', 'translate']]
+
+#n=10
+
+[['affine', 'rotate', 'affine', 'perspective'], ['affine', 'affine'], ['rotate', 'translate', 'affine', 'translate'], ['translate', 'perspective'], ['translate'], ['rotate'], ['perspective', 'rotate', 'affine', 'perspective', 'blur', 'rotate', 'perspective', 'perspective'], ['translate', 'translate', 'rotate', 'rotate', 'rotate', 'affine', 'perspective', 'rotate', 'translate'], ['affine', 'perspective', 'translate', 'affine', 'affine', 'blur', 'blur', 'rotate'], ['affine', 'affine', 'affine', 'translate', 'perspective', 'translate', 'perspective'], ['blur', 'rotate', 'blur', 'translate', 'affine', 'rotate'], ['blur', 'affine', 'perspective', 'affine', 'blur', 'rotate', 'perspective', 'blur', 'perspective']]
