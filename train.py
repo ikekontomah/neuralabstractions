@@ -5,7 +5,6 @@ import numpy as np
 import os
 import pickle
 import matplotlib.pyplot as plt
-#import plotly.graph_objects as go
 from model import EncoderFeedforward, EncoderCNN, DecoderRNN
 from torch.nn.utils.rnn import *
 from gen_sequence import *
@@ -58,11 +57,9 @@ def main(args):
             images = images.unsqueeze(1)                                   #Uncomment this line when training using EncoderCNN
             lengths = torch.tensor(lengths,device=device)
             padded_lengths = torch.tensor(padded_lengths,device=device)
-            #print(pack_sequence(transforms))
             targets = pack_padded_sequence(transforms, padded_lengths, batch_first=True)[0] 
-            #targets = pack_sequence(transforms)[0]
-            #print(targets)
-            # Forward, backward and optimize
+            
+
             features = encoder(images)
             outputs = decoder(features, transforms, padded_lengths)
             #print(outputs)
@@ -70,8 +67,6 @@ def main(args):
             loss = criterion1(outputs, targets)
             losses.append(loss.item())
             perplexity.append(np.exp(loss.item()))
-
-            #nll_loss = criterion2(softmax(outputs),targets)
 
             decoder.zero_grad()
             encoder.zero_grad()
@@ -87,24 +82,6 @@ def main(args):
                 torch.save(decoder.state_dict(), os.path.join(args.model_path, 'decoder-{}-{}.ckpt'.format(epoch+1, i+1)))
                 torch.save(encoder.state_dict(), os.path.join(args.model_path, 'encoder-{}-{}.ckpt'.format(epoch+1, i+1)))
 
-    #fig = go.Figure()
-    #fig.add_trace(go.Scatter(
-    #x=np.arange(len(losses)),
-    #y=losses,
-    #name = 'Cross Entropy Loss',
-    #connectgaps=True 
-    #))
-    #fig.add_trace(go.Scatter(
-    #x=np.arange(len(perplexity)),
-    #y=perplexity,
-    #name='Perplexity',
-    #connectgaps=True 
-    #))
-    #fig.update_layout(title='Training Accuracy and Perplexity for Model',
-    #               xaxis_title='Iterations',
-    #               yaxis_title='Cross Entropy Loss and Perplexity')
-    #fig.show()
-    #fig.write_image("plots/plots_ffwd/ffwd2.png")
     y = losses
     z = perplexity
     x = np.arange(len(losses))
@@ -114,11 +91,11 @@ def main(args):
     plt.ylabel('Cross Entropy Loss and Perplexity')
     plt.title("Cross Entropy Loss and Model Perplexity During Training")
     plt.legend()
-    plt.savefig('plots/plots_cnn/cnn5_gpu', dpi=100)
+    plt.savefig('plots/plots_cnn/cnn4_gpu', dpi=100)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model_path', type=str, default='models/model5/' , help='path for saving trained models')
+    parser.add_argument('--model_path', type=str, default='models/model4/' , help='path for saving trained models')
     parser.add_argument('--log_step', type=int , default=10, help='step size for prining log info')
     parser.add_argument('--save_step', type=int , default=1000, help='step size for saving trained models')
 

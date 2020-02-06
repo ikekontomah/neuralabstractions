@@ -25,11 +25,11 @@ def main(args):
     encoder.load_state_dict(torch.load(args.encoder_path))    #path for dumbing output of encoder model
     decoder.load_state_dict(torch.load(args.decoder_path))   #path for dumbing output of decoder model
 
-    test_data = generate_training_data(5)
+    test_data = generate_training_data(10)
     textures_test = generate_textures(test_data)
     transforms_test = generate_transforms(test_data)
     for i in range(len(textures_test)):
-        plt.imsave('predictions/texture2_3%i.png'%i, textures_test[i], cmap="gray")
+        plt.imsave('predictions/texture5_7%i.png'%i, textures_test[i], cmap="gray")
         
     print(transforms_test)
     predicted_progs = []
@@ -60,8 +60,8 @@ def main(args):
 if __name__ == '__main__':
     
     parser = argparse.ArgumentParser()
-    parser.add_argument('--encoder_path', type=str, default='models/model2/encoder-1-2000.ckpt', help='path for trained encoder')
-    parser.add_argument('--decoder_path', type=str, default='models/model2/decoder-1-2000.ckpt', help='path for trained decoder')
+    parser.add_argument('--encoder_path', type=str, default='models/model5/encoder-3-4000.ckpt', help='path for trained encoder')
+    parser.add_argument('--decoder_path', type=str, default='models/model5/decoder-3-4000.ckpt', help='path for trained decoder')
     # Model parameters (should be same as paramters in train.py)
     parser.add_argument('--embed_size', type=int , default=256, help='dimension of word embedding vectors')
     parser.add_argument('--hidden_size', type=int , default=512, help='dimension of lstm hidden states')

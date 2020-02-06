@@ -194,17 +194,17 @@ p4 = np.float32([[0,0],[random.randint(50,100),0],[0,random.randint(50,100)],[ra
 
 #Different perspective transforms on colored images
 
-psp1 = perspective_transform(im1, (p3,p4))
-cv2.imwrite("transforms_rgb/green_psp.png", psp1)
+# psp1 = perspective_transform(im1, (p3,p4))
+# cv2.imwrite("transforms_rgb/green_psp.png", psp1)
 
-psp2 = perspective_transform(im2, (p3,p4))
-cv2.imwrite("transforms_rgb/icy_psp.png", psp2)
+# psp2 = perspective_transform(im2, (p3,p4))
+# cv2.imwrite("transforms_rgb/icy_psp.png", psp2)
 
-psp3 = perspective_transform(im3, (p3,p4))
-cv2.imwrite("transforms_rgb/clouds_psp.png", psp3)
+# psp3 = perspective_transform(im3, (p3,p4))
+# cv2.imwrite("transforms_rgb/clouds_psp.png", psp3)
 
-psp4 = perspective_transform(im4, (p3,p4))
-cv2.imwrite("transforms_rgb/lake_psp.png", psp4)
+# psp4 = perspective_transform(im4, (p3,p4))
+# cv2.imwrite("transforms_rgb/lake_psp.png", psp4)
 #display_blur(im1)
 #display_blend(im1,im2)
 #display_translation(im1)

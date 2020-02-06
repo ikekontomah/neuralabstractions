@@ -106,3 +106,47 @@ Second set of checkpoints   #saved as texture2_2
 [['<start>-->perspective-->affine--><end>'], ['<start>-->rotate--><end>'], ['<start>-->translate--><end>'], ['<start>-->translate-->rotate--><end>'], ['<start>-->rotate--><end>']]
 
 
+
+
+N=5
+
+0th iteration:
+[['blend', 'translate'], ['perspective', 'blend', 'translate', 'blur', 'translate'], ['perspective', 'rotate', 'blend'], ['blur', 'blur', 'translate', 'blur'], ['translate', 'translate', 'rotate', 'rotate']]
+
+[['<start>-->translate--><end>'], ['<start>-->perspective-->translate-->translate--><end>'], ['<start>-->perspective-->rotate--><end>']g, ['<start>-->translate-->blur--><end>'], ['<start>-->translate-->translate-->rotate--><end>']g]
+
+1st iteration:
+
+[['blur'], ['blur', 'perspective'], ['perspective', 'affine', 'blend', 'translate', 'translate'], ['rotate', 'rotate', 'rotate', 'affine', 'blend'], ['blur']]
+[['<start>-->blur-->rotate--><end>'], ['<start>-->perspective--><end>'], ['<start>-->perspective-->translate-->translate--><end>'], ['<start>-->rotate-->affine--><end>'], ['<start>-->blur-->rotate--><end>']]     
+
+2nd iteration:
+
+[['blur', 'blur', 'blend', 'blend'], ['blur', 'rotate', 'rotate', 'rotate'], ['affine'], ['blend'], ['rotate'], ['blur', 'affine', 'blur', 'translate', 'translate'], ['blend', 'affine', 'rotate', 'perspective'], ['affine', 'blend'], ['blend', 'rotate'], ['blur', 'blend', 'rotate', 'affine'], ['rotate'], ['affine'], ['blend', 'rotate', 'rotate', 'rotate', 'translate'], ['blend', 'blend', 'affine', 'perspective'], ['blend', 'translate'], ['affine'], ['rotate', 'perspective'], ['translate', 'blend', 'perspective', 'affine', 'translate'], ['perspective', 'perspective'], ['translate', 'perspective', 'blur', 'blur']]
+
+[['<start>-->blur-->rotate--><end>']b, ['<start>-->rotate-->blur--><end>']b, ['<start>-->affine--><end>'], ['<start>-->rotate--><end>'], ['<start>-->rotate--><end>'], ['<start>-->translate-->blur-->blur--><end>']b, ['<start>-->rotate-->perspective--><end>'], ['<start>-->rotate--><end>'], ['<start>-->rotate--><end>'], ['<start>-->affine--><end>'], ['<start>-->rotate--><end>'], ['<start>-->rotate--><end>'], ['<start>-->rotate-->translate--><end>'], ['<start>-->perspective--><end>'], ['<start>-->translate--><end>'], ['<start>-->affine--><end>'], ['<start>-->perspective-->rotate-->affine--><end>'], ['<start>-->translate-->perspective-->translate--><end>'], ['<start>-->perspective--><end>'], ['<start>-->translate-->perspective--><end>']]
+
+
+3rd iteration:
+[['perspective'], ['affine', 'translate'], ['rotate'], ['rotate', 'rotate'], ['blend', 'perspective', 'blend'], ['rotate', 'perspective', 'blur'], ['rotate', 'rotate'], ['translate', 'blend', 'translate', 'blur'], ['perspective', 'translate', 'translate'], ['rotate', 'blend']]
+
+[['<start>-->perspective--><end>'], ['<start>-->affine-->translate--><end>'], ['<start>-->rotate--><end>'], ['<start>-->affine--><end>'], ['<start>-->perspective--><end>'], ['<start>-->perspective--><end>'], ['<start>-->rotate--><end>'], ['<start>-->translate-->blur--><end>'], ['<start>-->translate-->perspective-->translate--><end>'], ['<start>-->rotate--><end>']]
+
+
+4th iteration:
+[['blend', 'blur', 'rotate'], ['rotate', 'perspective', 'blend', 'blend', 'blend'], ['rotate'], ['translate', 'affine'], ['translate', 'blend', 'blur'], ['perspective', 'blend'], ['rotate', 'rotate'], ['blend', 'blur', 'blur'], ['perspective', 'translate', 'translate', 'translate'], ['affine', 'perspective']]
+
+[['<start>-->blur-->rotate--><end>'], ['<start>-->perspective--><end>'], ['<start>-->rotate-->rotate--><end>'], ['<start>-->translate-->affine--><end>'], ['<start>-->blur-->translate--><end>'], ['<start>-->perspective--><end>'], ['<start>-->rotate--><end>'], ['<start>-->blur-->rotate--><end>'], ['<start>-->perspective-->translate-->translate--><end>'], ['<start>-->affine-->perspective--><end>']]
+
+
+5th Iteration:
+
+[['perspective', 'blur'], ['translate', 'rotate'], ['perspective'], ['rotate', 'rotate', 'perspective', 'perspective', 'affine'], ['affine', 'rotate', 'affine', 'translate', 'translate'], ['blend', 'blend'], ['blend', 'affine', 'affine', 'affine', 'rotate'], ['rotate', 'translate', 'blur', 'blur'], ['affine', 'blend', 'translate'], ['rotate', 'rotate', 'translate', 'blur']]
+
+
+[['<start>-->perspective--><end>'], ['<start>-->translate-->rotate--><end>'], ['<start>-->perspective--><end>'], ['<start>-->perspective--><end>'], ['<start>-->translate-->translate--><end>'], ['<start>-->rotate--><end>'], ['<start>-->affine-->rotate--><end>'], ['<start>-->translate-->blur--><end>'], ['<start>-->translate--><end>'], ['<start>-->translate-->blur--><end>']]
+
+
+6th iteration:
+[['blur'], ['affine', 'affine', 'translate', 'blend'], ['affine', 'translate', 'affine', 'blur', 'blend'], ['translate'], ['affine', 'translate', 'rotate'], ['translate', 'translate', 'perspective', 'blend', 'blur'], ['perspective', 'rotate'], ['rotate', 'rotate'], ['blur'], ['blend', 'translate', 'translate']]
+[['<start>-->rotate--><end>'], ['<start>-->affine-->translate--><end>'], ['<start>-->translate-->affine-->blur--><end>'], ['<start>-->translate--><end>'], ['<start>-->translate-->translate-->rotate--><end>'], ['<start>-->translate-->perspective-->blur--><end>'], ['<start>-->affine--><end>'], ['<start>-->rotate--><end>'], ['<start>-->blur-->rotate--><end>'], ['<start>-->translate-->translate--><end>']]

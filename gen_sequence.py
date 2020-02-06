@@ -14,7 +14,7 @@ affine_params_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 persp_params_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 
 transforms_list = ['blur', 'blend', 'translate', 'rotate', 'affine', 'perspective']		# sequence of possible image transformations
-max_len = 5                                                            		        # maximum length of generated program sequence            
+max_len = 4                                                            		        # maximum length of generated program sequence            
 
 """
 	Generate a random sequence of transforms to be applied to an image
@@ -70,9 +70,9 @@ def sample_rand_prog(transforms_list):
 			translation_matrix = np.float32([[1,0,random.randint(10,100)],[0,1,random.randint(10,100)]])
 			trans = (trans_type,translation_matrix)
 
-		elif trans_type == 'blend':
-			weights = random.choice(blend_params_list)
-			trans = (trans_type,(weights, 1-weights))
+		# elif trans_type == 'blend':
+		# 	weights = random.choice(blend_params_list)
+		# 	trans = (trans_type,(weights, 1-weights))
 
 		elif trans_type == 'perspective':
 			pts1_psp = np.float32([[0,0],[random.randint(50,100),0],[0,random.randint(50,100)],[random.randint(50,100),random.randint(50,100)]])
