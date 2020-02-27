@@ -15,7 +15,7 @@ if not os.path.exists("plots/plots_cnn"):
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-vocab = ['blur', 'blend', 'translate', 'rotate', 'affine', 'perspective', 'pad', '<start>', '<end>']
+vocab = ['blur', 'translate', 'rotate', 'affine', 'perspective', 'pad', '<start>', '<end>']
 
 def main(args):
     if not os.path.exists(args.model_path):
@@ -95,8 +95,8 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model_path', type=str, default='models/model4/' , help='path for saving trained models')
-    parser.add_argument('--log_step', type=int , default=10, help='step size for prining log info')
+    parser.add_argument('--model_path', type=str, default='models/model4_004/' , help='path for saving trained models')
+    parser.add_argument('--log_step', type=int , default=100, help='step size for prining log info')
     parser.add_argument('--save_step', type=int , default=1000, help='step size for saving trained models')
 
     # Model parameters
@@ -108,7 +108,7 @@ if __name__ == '__main__':
     parser.add_argument('--num_iters', type=int, default=4000)
     parser.add_argument('--batch_size', type=int, default=batch_size)
     parser.add_argument('--num_workers', type=int, default=2)
-    parser.add_argument('--learning_rate', type=float, default=0.001)
+    parser.add_argument('--learning_rate', type=float, default=0.01)
     args = parser.parse_args()
     print(args)
     main(args)

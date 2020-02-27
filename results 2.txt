@@ -1,0 +1,108 @@
+ENCODER CNN, 5000 sequences per iteration for 5000 iterations:
+Checkpoints after first 1000 iterations
+
+Program Sequence
+[['blur'], ['rotate'], ['translate']]
+Predicted
+[['<start>->rotate-><end>'], ['<start>->rotate-><end>'], ['<start>->translate-><end>']]
+
+Program Sequence
+[['perspective'], ['translate'], ['blend']]
+Predicted
+[['<start>->perspective-><end>'], ['<start>->translate-><end>'], ['<start>->rotate-><end>']]
+
+
+Program Sequence
+[['affine'], ['blur'], ['perspective']]
+Predicted
+[['<start>->affine-><end>'], ['<start>->rotate-><end>'], ['<start>->perspective-><end>']]
+
+
+Program Sequence
+[['translate'], ['translate'], ['blur']]
+Predicted
+[['<start>->translate-><end>'], ['<start>->translate-><end>'], ['<start>->blur-><end>']]
+
+
+Program Sequence
+[['affine'], ['blend'], ['rotate']]
+Predicted
+[['<start>->affine-><end>'], ['<start>->rotate-><end>'], ['<start>->rotate-><end>']]
+
+
+Program Sequence
+[['blend'], ['blur'], ['blur']]
+Predicted
+[['<start>->rotate-><end>'], ['<start>->blur-><end>'], ['<start>->blur-><end>']]
+
+
+Program Sequence
+[['affine'], ['blur'], ['rotate']]
+Predicted
+[['<start>->affine-><end>'], ['<start>->rotate-><end>'], ['<start>->rotate-><end>']]
+
+
+Program Sequence
+[['perspective'], ['blur'], ['blend']]
+Predicted
+[['<start>->affine-><end>'], ['<start>->blur-><end>'], ['<start>->rotate-><end>']]
+
+Program Sequence
+[['rotate'], ['blur'], ['perspective']]
+Predicted
+[['<start>->rotate-><end>'], ['<start>->rotate-><end>'], ['<start>->perspective-><end>']]
+
+
+Program Sequence
+[['rotate'], ['affine'], ['perspective']]
+Predicted
+[['<start>->rotate-><end>'], ['<start>->affine-><end>'], ['<start>->perspective-><end>']]
+
+
+Program Sequence
+[['translate'], ['rotate'], ['affine'], ['blend'], ['affine']]
+Predicted
+[['<start>-->translate--><end>'], ['<start>-->rotate--><end>'], ['<start>-->affine--><end>'], ['<start>-->rotate--><end>'], ['<start>-->affine--><end>']]
+
+
+Program Sequence
+[['rotate'], ['perspective'], ['affine'], ['translate'], ['affine']]
+Predicted
+[['<start>-->rotate--><end>'], ['<start>-->perspective--><end>'], ['<start>-->affine--><end>'], ['<start>-->translate--><end>'], ['<start>-->affine--><end>']]
+
+
+Program Sequence
+[['translate'], ['translate'], ['translate'], ['perspective'], ['perspective']]
+Predicted
+[['<start>-->translate--><end>'], ['<start>-->translate--><end>'], ['<start>-->translate--><end>'], ['<start>-->perspective--><end>'], ['<start>-->perspective--><end>']]
+
+
+
+
+
+
+
+NOTE !!!! for n=1 , The textures are: This is what is currently in the predictions folder
+[['blur'], ['blur'], ['affine'], ['blur'], ['perspective']]    They are known as texture0, texture 1.... in predictions folder
+[['<start>-->blur--><end>'], ['<start>-->blur--><end>'], ['<start>-->affine--><end>'], ['<start>-->blur--><end>'], ['<start>-->perspective--><end>']]
+
+
+Second One:
+
+[['rotate'], ['rotate'], ['translate'], ['affine'], ['perspective']]    They are known as texture1_0, texture1_1 1.... in predictions folder
+[['<start>-->rotate--><end>'], ['<start>-->rotate--><end>'], ['<start>-->translate--><end>'], ['<start>-->affine--><end>'], ['<start>-->perspective--><end>']]
+
+
+N=2
+
+First good checkpoint
+
+[['rotate'], ['affine'], ['perspective', 'translate'], ['translate', 'blur'], ['translate', 'blur']]
+[['<start>-->rotate--><end>'], ['<start>-->affine--><end>'], ['<start>-->perspective-->translate--><end>'], ['<start>-->translate--><end>'], ['<start>-->translate--><end>']]
+
+
+Second set of checkpoints   #saved as texture2_2
+[['perspective', 'affine'], ['rotate'], ['affine', 'translate'], ['translate', 'rotate'], ['rotate']]
+[['<start>-->perspective-->affine--><end>'], ['<start>-->rotate--><end>'], ['<start>-->translate--><end>'], ['<start>-->translate-->rotate--><end>'], ['<start>-->rotate--><end>']]
+
+

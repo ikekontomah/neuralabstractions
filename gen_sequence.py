@@ -13,7 +13,7 @@ translation_params_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 affine_params_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 persp_params_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 
-transforms_list = ['blur', 'blend', 'translate', 'rotate', 'affine', 'perspective']		# sequence of possible image transformations
+transforms_list = ['blur', 'translate', 'rotate', 'affine', 'perspective']		# sequence of possible image transformations
 max_len = 4                                                            		        # maximum length of generated program sequence            
 
 """
@@ -70,9 +70,9 @@ def sample_rand_prog(transforms_list):
 			translation_matrix = np.float32([[1,0,random.randint(10,100)],[0,1,random.randint(10,100)]])
 			trans = (trans_type,translation_matrix)
 
-		# elif trans_type == 'blend':
-		# 	weights = random.choice(blend_params_list)
-		# 	trans = (trans_type,(weights, 1-weights))
+		elif trans_type == 'blend':
+		 	weights = random.choice(blend_params_list)
+		 	trans = (trans_type,(weights, 1-weights))
 
 		elif trans_type == 'perspective':
 			pts1_psp = np.float32([[0,0],[random.randint(50,100),0],[0,random.randint(50,100)],[random.randint(50,100),random.randint(50,100)]])
@@ -96,8 +96,8 @@ def apply_transform(im, prog):
 	if prog[0] == 'blur':
 		out_im = im_blur(im,prog[1])
 
-	if prog[0] == 'blend':
-		out_im = im_blend(im, im, prog[1])
+	# if prog[0] == 'blend':
+	# 	out_im = im_blend(im, im, prog[1])
 
 	elif prog[0] == 'affine':
 		out_im = affine_transform(im, prog[1])
@@ -136,15 +136,13 @@ def apply_program(input_im,program):
 	for prog in program:
 		output_im = apply_transform(output_im,prog)
 		transforms_list.append(prog[0])
-
-	#return (output_im,transforms_list)
 	return (cv2.resize(output_im, (64,64), interpolation = cv2.INTER_AREA),transforms_list)  #resized to smaller images for training
 
 def word_to_int(word):
 	if word == '<start>':
 		return 0
 	if word == '<end>':
-		return 7
+		return 6
 	if word == 'blur':
 		return 1
 	elif word == 'rotate':
@@ -155,18 +153,18 @@ def word_to_int(word):
 		return 4
 	elif word == 'perspective':
 		return 5
-	elif word == 'blend':
-		return 6
+	# elif word == 'blend':
+	# 	return 6
 	elif word == 'pad':
-		return 8
+		return 7
 	return -1
 
 def int_to_word(int_):
 	if int_ == 0:
 		return '<start>'
-	if int_ == 7:
+	if int_ == 6:
 		return '<end>'
-	if int_ == 8:
+	if int_ == 7:
 		return 'pad'
 	if int_ == 1:
 		return 'blur'
@@ -178,8 +176,8 @@ def int_to_word(int_):
 		return 'affine'
 	elif int_ == 5:
 		return 'perspective'
-	elif int_ == 6:
-		return 'blend'
+	# elif int_ == 6:
+	# 	return 'blend'
 	return 'NaN'
 #print(sample_rand_prog(transforms_list))
 #program = sample_rand_prog(transforms_list) 
