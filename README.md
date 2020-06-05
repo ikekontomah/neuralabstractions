@@ -10,11 +10,12 @@ block is a neural network trained for a specific image transformation on a set o
 The general idea to generate a random program sequence and try to infer the random program sequence using any
 form of encoder-decoder neural network architecture.
 
-To display image transformations, run texture_transformations.py for grayscale and texture_transformationsRGB.py
+To display image transformations,
 ----------------------------------------------------------------------------------------------------------------
-for color
+run texture_transformations.py for grayscale and texture_transformationsRGB.pyfor color
+To generate textures, 
 -----------------------------------------
-To generate textures, run gen_sequence.py
+run gen_sequence.py
+To train models, 
 -----------------------------------------
-To train models, run train.py.
------------------------------------------
+run train.py.
