@@ -7,7 +7,7 @@ different transformations. We expect that an image produced from a given sequenc
 a high probability of being found in the set of images generated from the encoder-decoder network where each
 block is a neural network trained for a specific image transformation on a set of images.
 
-The general idea to generate a random program sequence and try to infer the random program sequence using any
+The general idea is to generate a random program sequence and try to infer the random program sequence using any
 form of encoder-decoder neural network architecture.
 
 To display image transformations,
