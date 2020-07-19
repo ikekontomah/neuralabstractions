@@ -11,11 +11,11 @@ The general idea is to generate a random program sequence and try to infer the r
 form of encoder-decoder neural network architecture.
 
 To display image transformations,
-----------------------------------------------------------------------------------------------------------------
+---------------------------------
 run texture_transformations.py for grayscale and texture_transformationsRGB.pyfor color
 To generate textures, 
------------------------------------------
+---------------------
 run gen_sequence.py
 To train models, 
------------------------------------------
+----------------
 run train.py.
