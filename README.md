@@ -18,3 +18,6 @@ run gen_sequence.py
 
 To train models, 
 run train.py.
+
+To predict program sequences that create textures,
+run predict_prog.py
