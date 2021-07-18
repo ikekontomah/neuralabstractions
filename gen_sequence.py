@@ -198,7 +198,7 @@ def int_to_word(int_):
 #plt.imsave('textures/texture1.png', out_im, cmap="gray")
 
 ## Generating training data
-batch_size = 5000
+batch_size = 100
 
 def generate_training_data(batch_size):
 	training_data = []
